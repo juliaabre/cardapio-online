@@ -1,0 +1,2105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:background="@color/darkBlue"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        >
+
+        <!-- Cabeçalho contento o nome do restaurante -->
+
+        <ImageView
+            android:id="@+id/imageEllipse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ellipse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/imageLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageEllipse"
+            app:layout_constraintBottom_toBottomOf="@+id/imageEllipse"
+            />
+
+        <ImageView
+            android:id="@+id/imageGastrobar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gastrobar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageLogo"
+            app:layout_constraintBottom_toBottomOf="@+id/imageEllipse"
+            />
+
+        <!-- Subtítulo -->
+        <ImageView
+            android:id="@+id/imageSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            app:layout_constraintTop_toBottomOf="@+id/imageEllipse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="35dp"
+            android:layout_marginTop="50dp"
+            />
+        <TextView
+            android:id="@+id/textSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitle"
+            android:textColor="@color/brown"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:padding="20dp"
+            app:layout_constraintTop_toTopOf="@+id/imageSubtitle"
+            app:layout_constraintBottom_toBottomOf="@id/imageSubtitle"
+            app:layout_constraintEnd_toEndOf="@id/imageSubtitle"
+            app:layout_constraintStart_toStartOf="@id/imageSubtitle"
+            />
+
+        <!-- Menu de opções -->
+
+        <ImageView
+            android:id="@+id/imageMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            app:layout_constraintTop_toBottomOf="@+id/imageSubtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/textEntradas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_menu_entradas"
+            android:textColor="@color/brown"
+            app:layout_constraintTop_toTopOf="@+id/imageMenu"
+            app:layout_constraintBottom_toBottomOf="@id/imageMenu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="parent"
+             />
+
+        <TextView
+            android:id="@+id/textPratosPrincipais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_menu_pp"
+            android:textColor="@color/brown"
+            app:layout_constraintTop_toTopOf="@+id/imageMenu"
+            app:layout_constraintBottom_toBottomOf="@id/imageMenu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.38"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textBebidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_menu_bebidas"
+            android:textColor="@color/brown"
+            app:layout_constraintTop_toTopOf="@+id/imageMenu"
+            app:layout_constraintBottom_toBottomOf="@id/imageMenu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textSobremesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_menu_sobremesas"
+            android:textColor="@color/brown"
+            app:layout_constraintTop_toTopOf="@+id/imageMenu"
+            app:layout_constraintBottom_toBottomOf="@id/imageMenu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <!-- Titulo da Sessão de Entradas-->
+
+        <TextView
+            android:id="@+id/textTitleEntradas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_menu_entradas"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageMenu"
+            android:layout_marginTop="30dp"
+            />
+
+        <!-- Expositor dos pratos das Entradas -->
+        <!-- Prato 01 -->
+        <ImageView
+            android:id="@+id/imageExpositor1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTitleEntradas"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitleEntradas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_entradas_1"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor1"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor1"
+            app:layout_constraintVertical_bias="0.1"
+            />
+
+        <TextView
+            android:id="@+id/textTimeEntradas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_entradas_1"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleEntradas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor1"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor1"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionEntradas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_entradas_1"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimeEntradas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor1"
+            app:layout_constraintHorizontal_bias="0.15"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor1"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor1"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxEntradas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxEntradas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor1"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositor1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPriceEntradas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_entradas_1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxEntradas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor1"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositor1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Prato 02 -->
+
+        <ImageView
+            android:id="@+id/imageExpositor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.607"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositor1" />
+
+        <TextView
+            android:id="@+id/textTitleEntradas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_entradas_2"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor2"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor2"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.13"
+            />
+
+        <TextView
+            android:id="@+id/textTimeEntradas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_entradas_2"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleEntradas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor1"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor1"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionEntradas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_entradas_2"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimeEntradas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor2"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor2"
+            app:layout_constraintHorizontal_bias="0.15"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor2"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor2"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor2"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+
+        <CheckBox
+            android:id="@+id/checkboxEntradas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxEntradas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor2"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositor2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPriceEntradas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_entradas_2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxEntradas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor2"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositor2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Prato 03 -->
+
+        <ImageView
+            android:id="@+id/imageExpositor3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositor2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitleEntradas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_entradas_3"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor3"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor3"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.08"
+            />
+
+        <TextView
+            android:id="@+id/textTimeEntradas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_entradas_3"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleEntradas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor3"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor3"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionEntradas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_entradas_3"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimeEntradas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor3"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor3"
+            app:layout_constraintHorizontal_bias="0.15"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor3"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor3"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor3"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxEntradas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor3"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxEntradas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor3"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositor3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPriceEntradas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_entradas_3"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxEntradas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor3"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositor3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Prato 04 -->
+
+        <ImageView
+            android:id="@+id/imageExpositor4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositor3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitleEntradas4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_entradas_4"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor4"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor4"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor4"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.08"
+            />
+
+        <TextView
+            android:id="@+id/textTimeEntradas4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_entradas_4"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleEntradas4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor1"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor4"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionEntradas4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_entradas_4"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimeEntradas4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor4"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor4"
+            app:layout_constraintHorizontal_bias="0.15"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor4"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor4"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor4"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxEntradas4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor4"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor4"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxEntradas4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor4"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositor4"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor4"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPriceEntradas4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_entradas_4"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxEntradas4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor4"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositor4"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor4"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Prato 05 -->
+
+        <ImageView
+            android:id="@+id/imageExpositor5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositor4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitleEntradas5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_entradas_5"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor5"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor5"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor5"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor5"
+            app:layout_constraintVertical_bias="0.1"
+            />
+
+        <TextView
+            android:id="@+id/textTimeEntradas5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_entradas_5"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleEntradas5"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor5"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor5"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionEntradas5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_entradas_5"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimeEntradas5"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor5"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor5"
+            app:layout_constraintHorizontal_bias="0.18"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor5"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor5"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositor5"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor5"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxEntradas5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositor5"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor5"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor5"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxEntradas5"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor5"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositor5"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor5"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPriceEntradas5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_entradas_5"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxEntradas5"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositor5"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositor5"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositor5"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <!-- Titulo da Sessão de Pratos Principais-->
+
+        <TextView
+            android:id="@+id/textTitlePP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_menu_pp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageExpositor5"
+            android:layout_marginTop="30dp"
+            />
+
+        <!-- Expositor dos pratos principais -->
+        <!-- Prato 01 -->
+        <ImageView
+            android:id="@+id/imageExpositorPP1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTitlePP"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitlePP1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_pp_1"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP1"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.08"
+            />
+
+        <TextView
+            android:id="@+id/textTimePP1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_pp_1"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitlePP1"
+            app:layout_constraintEnd_toEndOf="@+id/textTitlePP1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textTitlePP1"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionPP1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_pp_1"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimePP1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP1"
+            app:layout_constraintHorizontal_bias="0.14"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP1"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP1"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxPP1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxPP1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP1"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorPP1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPricePP1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_PP_1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxPP1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP1"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorPP1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Prato 02 -->
+        <ImageView
+            android:id="@+id/imageExpositorPP2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositorPP1"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitlePP2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_pp_2"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP2"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP2"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.1"
+            />
+
+        <TextView
+            android:id="@+id/textTimePP2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_pp_2"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitlePP2"
+            app:layout_constraintEnd_toEndOf="@+id/textTitlePP2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textTitlePP2"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionPP2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_pp_2"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimePP2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP2"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP2"
+            app:layout_constraintHorizontal_bias="0.15"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP2"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP2"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP2"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxPP2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxPP2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP2"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorPP2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPricePP2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_PP_2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxPP2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP2"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorPP2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Prato 03 -->
+        <ImageView
+            android:id="@+id/imageExpositorPP3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositorPP2"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitlePP3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_pp_3"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP3"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP3"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.1"
+            />
+
+        <TextView
+            android:id="@+id/textTimePP3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_pp_3"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitlePP3"
+            app:layout_constraintEnd_toEndOf="@+id/textTitlePP3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textTitlePP3"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionPP3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_pp_3"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimePP3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP3"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP3"
+            app:layout_constraintHorizontal_bias="0.13"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP3"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP3"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP3"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxPP3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP3"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxPP3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP3"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorPP3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPricePP3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_PP_3"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxPP3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP3"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorPP3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Prato 04 -->
+        <ImageView
+            android:id="@+id/imageExpositorPP4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositorPP3"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitlePP4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_pp_4"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP4"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP4"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP4"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.12"
+            />
+
+        <TextView
+            android:id="@+id/textTimePP4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_pp_4"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitlePP4"
+            app:layout_constraintEnd_toEndOf="@+id/textTitlePP4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textTitlePP4"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionPP4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_pp_4"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimePP4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP4"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP4"
+            app:layout_constraintHorizontal_bias="0.19"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP4"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP4"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP4"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxPP4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP4"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP4"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxPP4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP4"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorPP4"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP4"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPricePP4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_PP_4"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxPP4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP4"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorPP4"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP4"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Prato 05 -->
+        <ImageView
+            android:id="@+id/imageExpositorPP5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositorPP4"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitlePP5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_pp_5"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP5"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP5"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP5"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP5"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.08"
+            />
+
+        <TextView
+            android:id="@+id/textTimePP5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_pp_5"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitlePP5"
+            app:layout_constraintEnd_toEndOf="@+id/textTitlePP5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textTitlePP5"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionPP5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_pp_5"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimePP5"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP5"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP5"
+            app:layout_constraintHorizontal_bias="0.15"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP5"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP5"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorPP5"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP5"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxPP5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorPP5"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP5"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP5"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxPP5"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP5"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorPP5"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP5"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPricePP5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_PP_5"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxPP5"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorPP5"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorPP5"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorPP5"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Titulo da Sessão de Bebidas-->
+
+        <TextView
+            android:id="@+id/textTitleBebidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_menu_bebidas"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageExpositorPP5"
+            android:layout_marginTop="30dp"
+            />
+
+        <!-- Bebida 01 -->
+        <ImageView
+            android:id="@+id/imageExpositorBebidas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTitleBebidas"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitleBebidas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_bebidas_1"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.1"
+            />
+
+        <TextView
+            android:id="@+id/textTimeBebidas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_bebidas_1"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleBebidas1"
+            app:layout_constraintEnd_toEndOf="@+id/textTitleBebidas1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textTitleBebidas1"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionBebidas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_bebidas_1"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimeBebidas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintHorizontal_bias="0.09"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxBebidas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxBebidas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorBebidas1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPriceBebidas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_bebidas_1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxBebidas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorBebidas1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Bebida 02 -->
+        <ImageView
+            android:id="@+id/imageExpositorBebidas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositorBebidas1"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitleBebidas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_bebidas_2"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.08"
+            />
+
+        <TextView
+            android:id="@+id/textTimeBebidas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_bebidas_2"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleBebidas2"
+            app:layout_constraintEnd_toEndOf="@+id/textTitleBebidas2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textTitleBebidas2"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionBebidas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_bebidas_2"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimeBebidas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintHorizontal_bias="0.12"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxBebidas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxBebidas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorBebidas2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPriceBebidas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_bebidas_2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxBebidas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorBebidas2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Bebida 03 -->
+        <ImageView
+            android:id="@+id/imageExpositorBebidas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositorBebidas2"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitleBebidas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_bebidas_3"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.1"
+            />
+
+        <TextView
+            android:id="@+id/textTimeBebidas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_bebidas_3"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleBebidas3"
+            app:layout_constraintEnd_toEndOf="@+id/textTitleBebidas3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textTitleBebidas3"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionBebidas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_bebidas_3"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimeBebidas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintHorizontal_bias="0.11"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxBebidas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas3"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxBebidas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorBebidas3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPriceBebidas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_bebidas_3"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxBebidas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorBebidas3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorBebidas3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Titulo da Sessão de Sobremesas-->
+
+        <TextView
+            android:id="@+id/textTitleSobremesas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_menu_sobremesas"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageExpositorBebidas3"
+            android:layout_marginTop="30dp"
+            />
+
+        <!-- Sobremesa 01 -->
+        <ImageView
+            android:id="@+id/imageExpositorSobremesas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTitleSobremesas"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitleSobremesas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_sobremesas_1"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.1"
+            />
+
+        <TextView
+            android:id="@+id/textTimeSobremesas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_sobremesas_1"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleSobremesas1"
+            app:layout_constraintEnd_toEndOf="@+id/textTitleSobremesas1"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/textTitleSobremesas1"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionSobremesas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_sobremesas_1"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimeSobremesas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintHorizontal_bias="0.15"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxSobremesas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxSobremesas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorSobremesas1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPriceSobremesas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_sobremesas_1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxSobremesas1"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorSobremesas1"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Sobremesa 02 -->
+        <ImageView
+            android:id="@+id/imageExpositorSobremesas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositorSobremesas1"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitleSobremesas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_sobremesas_2"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.088"
+            />
+
+        <TextView
+            android:id="@+id/textTimeSobremesas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_sobremesas_2"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleSobremesas2"
+            app:layout_constraintEnd_toEndOf="@+id/textTitleSobremesas2"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/textTitleSobremesas2"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionSobremesas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_sobremesas_2"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimeSobremesas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintHorizontal_bias="0.15"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxSobremesas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxSobremesas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorSobremesas2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPriceSobremesas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_sobremesas_2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxSobremesas2"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorSobremesas2"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Sobremesa 03 -->
+        <ImageView
+            android:id="@+id/imageExpositorSobremesas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositorSobremesas2"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitleSobremesas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_sobremesas_3"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.1"
+            />
+
+        <TextView
+            android:id="@+id/textTimeSobremesas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_sobremesas_3"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleSobremesas3"
+            app:layout_constraintEnd_toEndOf="@+id/textTitleSobremesas3"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/textTitleSobremesas3"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionSobremesas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_sobremesas_3"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimeSobremesas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintHorizontal_bias="0.2"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxSobremesas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas3"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxSobremesas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorSobremesas3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPriceSobremesas3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_sobremesas_3"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxSobremesas3"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorSobremesas3"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Sobremesa 04 -->
+
+        <ImageView
+            android:id="@+id/imageExpositorSobremesas4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:paddingHorizontal="180dp"
+            android:paddingVertical="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositorSobremesas3"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/textTitleSobremesas4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_sobremesas_4"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.1"
+            />
+
+        <TextView
+            android:id="@+id/textTimeSobremesas4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_product_sobremesas_4"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleSobremesas4"
+            app:layout_constraintEnd_toEndOf="@+id/textTitleSobremesas4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textTitleSobremesas4"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textDescriptionSobremesas4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_product_sobremesas_4"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textTimeSobremesas4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintHorizontal_bias="0.11"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/editText_observation"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintStart_toStartOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.2"
+            />
+
+        <CheckBox
+            android:id="@+id/checkboxSobremesas4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas4"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxSobremesas4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorSobremesas4"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textPriceSobremesas4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_sobremesas_4"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/lightOrange"
+            app:layout_constraintBottom_toTopOf="@+id/checkboxSobremesas4"
+            app:layout_constraintEnd_toEndOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@id/imageExpositorSobremesas4"
+            app:layout_constraintTop_toTopOf="@+id/imageExpositorSobremesas4"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!-- Valor Total -->
+        <TextView
+            android:id="@+id/textLabelTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_price"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_marginTop="50dp"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageExpositorSobremesas4"
+            />
+
+        <!-- Buttons -->
+
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/button_calculate"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textColor="@color/lightOrange"
+            android:backgroundTint="@color/white"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textLabelTotal" />
+
+        <Button
+            android:id="@+id/buttonBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/lightOrange"
+            android:textColor="@color/white"
+            android:text="@string/button_buy"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textLabelTotal"
+            />
+
+        <!-- Footer -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/footer"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonCalculate"
+            android:padding="30dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

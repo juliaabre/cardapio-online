@@ -1,0 +1,115 @@
+<resources>
+
+    <!-- Strings comuns -->
+
+    <string name="app_name">OnlineMenu</string>
+    <string name="subtitle">Para realizar seu pedido, selecione pelo menos um produto.\nAo final, você poderá conferir o valor total.</string>
+    <string name="editText_observation">Adicionar observação sobre o pedido.</string>
+    <string name="total_price">RS 0.00</string>
+    <string name="price">R$</string>
+    <string name="footer">Sol e Sabor Del Mar</string>
+
+    <!-- Strings referente a divisão de pratos-->
+
+    <string name="text_menu_entradas">Entradas</string>
+    <string name="text_menu_pp">Pratos Principais</string>
+    <string name="text_menu_bebidas">Bebidas</string>
+    <string name="text_menu_sobremesas">Sobremesas</string>
+
+    <!-- Strings referente as entradas -->
+
+    <string name="title_product_entradas_1">Camarão | Catupiry</string>
+    <string name="price_entradas_1">49</string>
+    <string name="description_product_entradas_1">Camarão crocante,\nrecheado com catupiry (5 unid)</string>
+    <string name="time_product_entradas_1">Tempo: 05min-10min</string>
+
+    <string name="title_product_entradas_2">Burrata | Presunto de parma</string>
+    <string name="price_entradas_2">74</string>
+    <string name="description_product_entradas_2">Burrata crocante com parma,\npesto de manjericão</string>
+    <string name="time_product_entradas_2">Tempo: 05min-10min</string>
+
+    <string name="title_product_entradas_3">Bacalhau | Nata</string>
+    <string name="price_entradas_3">49</string>
+    <string name="description_product_entradas_3">Pastel de bacalhau e nata (5 und)</string>
+    <string name="time_product_entradas_3">Tempo: 05min-10min</string>
+
+    <string name="title_product_entradas_4">Fritas | Trufa</string>
+    <string name="price_entradas_4">29</string>
+    <string name="description_product_entradas_4">Batatas fritas, azeite trufado e\nqueijo grana padano 160g</string>
+    <string name="time_product_entradas_4">Tempo: 05min-10min</string>
+
+    <string name="title_product_entradas_5">Peixe | Gergelim</string>
+    <string name="price_entradas_5">37</string>
+    <string name="description_product_entradas_5">Iscas de peixe crocante empanadas\ncom gergelim tostado (7 und)</string>
+    <string name="time_product_entradas_5">Tempo: 05min-10min</string>
+
+    <!-- Strings referente aos pratos principais -->
+
+    <string name="title_product_pp_1">Salmão | Coalho</string>
+    <string name="price_PP_1">86</string>
+    <string name="description_product_pp_1">Salmão recheado com queijo coalho\narroz negro 360g</string>
+    <string name="time_product_pp_1">Tempo: 30min-40min</string>
+
+    <string name="title_product_pp_2">Atum | Frutas Vermelhas</string>
+    <string name="price_PP_2">68</string>
+    <string name="description_product_pp_2">Atum, molho de frutas vermelhas,\npurê de mandioquinha 350g </string>
+    <string name="time_product_pp_2">Tempo: 30min-40min</string>
+
+    <string name="title_product_pp_3">Cordeiro | Aspargos</string>
+    <string name="price_PP_3">89</string>
+    <string name="description_product_pp_3">Carré de cordeiro, molho\ne risoto de aspargos 150g </string>
+    <string name="time_product_pp_3">Tempo: 30min-40min</string>
+
+    <string name="title_product_pp_4">Frango de leite | Cogumelos</string>
+    <string name="price_PP_4">69</string>
+    <string name="description_product_pp_4">Frango de leite, polenta, cogumelos e\nmolho de cerveja preta 350g</string>
+    <string name="time_product_pp_4">Tempo: 30min-40min</string>
+
+    <string name="title_product_pp_5">Polvo | Lula</string>
+    <string name="price_PP_5">71</string>
+    <string name="description_product_pp_5">Picchi, polvo, lula e\nfonduta de grana parmesão 280g</string>
+    <string name="time_product_pp_5">Tempo: 30min-40min</string>
+
+    <!-- Strings referente as bebidas -->
+
+    <string name="title_product_bebidas_1">Água Mineral</string>
+    <string name="price_bebidas_1">8</string>
+    <string name="description_product_bebidas_1">500mL</string>
+    <string name="time_product_bebidas_1">Tempo: -</string>
+
+    <string name="title_product_bebidas_2">Suco Natural</string>
+    <string name="price_bebidas_2">12</string>
+    <string name="description_product_bebidas_2">Sabores: Morango, Limão,\nLaranja, Abacaxi 500mL</string>
+    <string name="time_product_bebidas_2">Tempo: 10min-20min</string>
+
+    <string name="title_product_bebidas_3">Drink Especial</string>
+    <string name="price_bebidas_3">21</string>
+    <string name="description_product_bebidas_3">Drink alcoolico</string>
+    <string name="time_product_bebidas_3">Tempo: 10min-20min</string>
+
+    <!-- Strings referente as sobremesas -->
+
+    <string name="title_product_sobremesas_1">Castanha | Pistache</string>
+    <string name="price_sobremesas_1">35</string>
+    <string name="description_product_sobremesas_1">Dacquoise de castanha e coco,\nmousse de pistache 100g</string>
+    <string name="time_product_sobremesas_1">Tempo: 15min-20min</string>
+
+    <string name="title_product_sobremesas_2">Queijo | Goiaba</string>
+    <string name="price_sobremesas_2">32</string>
+    <string name="description_product_sobremesas_2">Mousse de queijo, calda de goiaba\ne crumble de castanha 100g</string>
+    <string name="time_product_sobremesas_2">Tempo: 15min-20min</string>
+
+    <string name="title_product_sobremesas_3">Carolina | Chocolate</string>
+    <string name="price_sobremesas_3">27</string>
+    <string name="description_product_sobremesas_3">Craquelin com mousse de chocolate,\nsorvete de creme 60g</string>
+    <string name="time_product_sobremesas_3">Tempo: 15min-20min</string>
+
+    <string name="title_product_sobremesas_4">Petit Gateau | Cream Cheese</string>
+    <string name="price_sobremesas_4">29</string>
+    <string name="description_product_sobremesas_4">Bolo de chocolate e\nsorvete de cream cheese 60g</string>
+    <string name="time_product_sobremesas_4">Tempo: 15min-20min</string>
+
+    <!-- Strings referente aos botoes -->
+    <string name="button_calculate">Calcular</string>
+    <string name="button_buy">Finalizar Pedido!</string>
+    </resources>
