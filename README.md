@@ -13,3 +13,5 @@ Um sistema de gerenciamento de pedidos, focada em calcular o valor total do pedi
 
 ## Screenshots/Vídeos/GIFs
 
+![Image1](https://github.com/juliaabre/cardapio-online/assets/140017615/1132962a-9474-438a-966d-2adf4036b738)
+![Image2](https://github.com/juliaabre/cardapio-online/assets/140017615/af17b538-2f20-4ad8-822c-200d55de0d3c)
